@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block link %}
+    {% endblock %}
+</head>
+
+<body>
+
+    <!-- Navbar section -->
+    <div style="background-color: #8c02fd;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand mb-0 h1" href="/">Gringotts</a>
+                <button class="navbar-toggler btn-outline-light" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+
+                <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="customer-nav-link nav-link" href="/customer_list/">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="transaction-nav-link nav-link" href="/transactions/">Transactions</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

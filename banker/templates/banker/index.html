@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 text-center">
+        <img src="{% static 'images/bitcoin.svg' %}" alt="bank vault" width="500" height="500">
+    </div>
+
+    <div class="col-md-6 text-center my-auto">
+        <h4>Welcome to Gringotts Wizarding Bank. The one and only bank in the world of wizardry, where worlds most
+            renowned witches and wizards like to keep their money and valuables. Apart from just keeping their money and
+            valueabels, one can also
+            transfer money to other fellow witches and wizards.</h4>
+        <button class="btn btn-primary mt-4" type="button"><a href="/customer_list/">View All Customers</a></button>
+        <button class="btn btn-primary mt-4" type="button"><a href="/transactions/">Transaction History</a></button>
+    </div>
+
+</div>
+{% endblock %}

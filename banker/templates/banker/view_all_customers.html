@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/view_all_customers.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row mt-4">
+    {% for customer in customers %}
+    <div class="col-md-4">
+      <a class="text-dark" id="info-link" href="{% url 'banker:customer-detail' pk=customer.id %}">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+            <h2 style="font-size:18px;font-weight:bold;min-height:42px;">
+              {{ customer.name|truncatechars:50 }}</h2>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted"><b>Email:</b> {{ customer.email }}</small>
+              <small class="text-muted"><b>Mobile No:</b> {{ customer.mobile_no }}</small>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

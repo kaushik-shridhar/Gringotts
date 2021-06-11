@@ -1,0 +1,16 @@
+.navbar {
+    padding: 1rem 1rem 1rem;
+    padding-right: 2rem;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}

@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(to bottom, #8c02fd 50%, white 50%);
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    padding: 2rem 2rem 2rem;
+    padding-right: 2rem;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+#info-link {
+    box-shadow: 10px 10px grey;
+}
+
+#info-link:hover {
+    box-shadow: 10px 10px grey;
+    border: 1px solid black;
+}

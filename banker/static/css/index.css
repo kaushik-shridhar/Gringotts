@@ -1,0 +1,31 @@
+/* .navbar {
+    padding: 1rem 1rem 1rem;
+    padding-right: 2rem;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+} */
+
+.btn-primary {
+    background-color: #8c02fd;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #9902fd;
+    color: white;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+h4 {
+    font-family:'Courier New', Courier, monospace
+}

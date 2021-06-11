@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(to bottom, #8c02fd 50%, white 50%);
+    background-repeat: no-repeat;
+}
+
+/* .navbar {
+    padding: 2rem 2rem 2rem;
+    padding-right: 2rem;
+} */
+
+.custom-profile {
+    padding-left: 2rem;
+    color: white;
+}
+
+.bal {
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+} */
+
+.card {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img {
+    border-radius: 50%;
+}
+
+tr {
+    border: hidden;
+}
+
+.btn-primary {
+    border: none;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #8c02fd;
+}
+
+.btn-primary:hover {
+    background-color: #9902fd;
+}

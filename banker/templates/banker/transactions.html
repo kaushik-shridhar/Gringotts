@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}Transaction History{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/transactions.css' %}">
+{% endblock %}
+
+{% block content %}
+<table class="table table-striped">
+    <tbody>
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>Reciever</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.sender_name }}</td>
+                <td>{{ transaction.reciever_name }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.date }}</td>
+                <td>{{ transaction.time }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
