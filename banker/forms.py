@@ -22,7 +22,7 @@ class TransferForm(forms.Form):
     # )
     amount = forms.IntegerField(
         widget=forms.NumberInput(
-            attrs={'class':'form-control'}
+            attrs={'class':'form-control', 'onkeyup':'check()'}
         ),
         label='Amount:'
     )

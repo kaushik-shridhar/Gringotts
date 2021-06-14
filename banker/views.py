@@ -25,6 +25,7 @@ class CustomerDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['form'] = TransferForm(initial={'sender_name':kwargs['object']})
         context['users'] = userinfo.objects.all()
+        context['bal'] = userinfo.objects.get(pk=7).current_balance
         return context
 
 class TransactionView(ListView):

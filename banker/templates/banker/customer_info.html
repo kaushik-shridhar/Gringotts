@@ -77,10 +77,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form action='/transfer/' method="POST">
+                <form action='/transfer/' method="POST" name='transfer_form'>
                   {% csrf_token %}
                   {{ form.as_p }}
-                  <input class="btn btn-primary" type="submit" value="Send Money">
+                  <input class="btn btn-primary" type="submit" value="Send Money" id="send_btn">
                 </form>
               </div>
             </div>
@@ -90,4 +90,18 @@
     </div>
   </div>
 </div>
+
+<script>
+  function check() {
+    var amount = document.forms["transfer_form"]["amount"].value;
+    if (amount > parseInt('{{ bal }}')) {
+      document.getElementById("send_btn").disabled = true;
+      document.getElementById("alert").style.display = "block"
+    }
+    else {
+      document.getElementById("send_btn").disabled = false;
+      document.getElementById("alert").style.display = "none"
+    }
+  }
+</script>
 {% endblock %}
