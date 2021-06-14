@@ -1,0 +1,8 @@
+# environment
+env/
+
+# vscode
+.vscode/
+
+# extras
+__pycache__/

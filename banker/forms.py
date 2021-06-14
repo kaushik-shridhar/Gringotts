@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import UserInfo
+from .models import userinfo
 
 class TransferForm(forms.Form):
     sender_name = forms.CharField(
@@ -11,7 +11,7 @@ class TransferForm(forms.Form):
         label='From:'
     )
     reciever_name = forms.ChoiceField(
-        choices=UserInfo.objects.values_list('id', 'name'),
+        choices=userinfo.objects.values_list('id', 'name'),
     )
     # reciever_name = forms.CharField(
     #     max_length=100,

@@ -4,13 +4,13 @@ from django.utils import timezone
 
 # Create your models here.
 
-class UserInfo(models.Model):
+class userinfo(models.Model):
     user_img = models.ImageField(upload_to='images/', default='images/profile.jpg')
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     mobile_no = models.IntegerField()
     current_balance = models.IntegerField()
-    dob = models.DateTimeField(default=date.today())
+    dob = models.DateTimeField(default=None)
     age = models.IntegerField(default=18)
 
     def __str__(self):

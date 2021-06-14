@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a&ze##tjthk8=50tu4%d8p+0+=dlmjfpemykh8khtuals3(0%r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'gringotts-spoof.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.6', 'gringotts-spoof.herokuapp.com']
 
 
 # Application definition
@@ -78,10 +78,20 @@ WSGI_APPLICATION = 'Gringotts.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3q921dd9okqci',
+        'USER': 'nicsakscepengg',
+        'PASSWORD': '7cd3aa0daa26e2c470a91f973f3082f73a27547745312d1d7f3519015cac8c05',
+        'HOST': 'ec2-54-91-188-254.compute-1.amazonaws.com',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation

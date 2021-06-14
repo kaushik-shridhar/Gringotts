@@ -12,4 +12,4 @@ urlpatterns = [
     path('customer_list/<pk>/', CustomerDetailView.as_view(), name='customer-detail'),
     path('transactions/', TransactionView.as_view(), name='transaction-history'),
     path('transfer/', TransferView.as_view(), name='transfer'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
